@@ -1,0 +1,34 @@
+@font-face {
+  font-family: "TestFontNormal";
+  font-style: normal;
+  src: url("../font/Roboto-Italic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "TestFontBold";
+  src: url("../font/Roboto-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: bold;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font: 22px/1.5 Arial;
+}
+
+body .fontNormal {
+  font-family: TestFontNormal;
+  font-weight: normal;
+}
+
+body .fontBold {
+  font-family: TestFontBold;
+}
+
+@supports (-webkit-appearance:none) {
+
+}
