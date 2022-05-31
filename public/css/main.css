@@ -1,34 +1,24 @@
-@font-face {
-  font-family: "TestFontNormal";
-  font-style: normal;
-  src: url("../font/Roboto-Italic.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "TestFontBold";
-  src: url("../font/Roboto-Bold.ttf") format("truetype");
-  font-style: normal;
-  font-weight: bold;
-}
-
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  font: 22px/1.5 Arial;
-}
-
-body .fontNormal {
-  font-family: TestFontNormal;
-  font-weight: normal;
-}
-
-body .fontBold {
-  font-family: TestFontBold;
+  font: 24px/32px "Montserrat", sans-serif;
 }
 
 @supports (-webkit-appearance:none) {
 
+}
+
+@media only screen and (max-width: 800px) {
+  body {
+    background-color: limegreen;
+  }
+
+@supports (-webkit-appearance:none) {
+
+}
 }

@@ -1,0 +1,40 @@
+@import '../constants.scss';
+
+.choice {
+    background-color: $bg-dark;
+
+    &__content {
+        @include content-wrapper();
+        padding: 100px 70px;
+
+        @include media-lg() {
+            padding: 100px 20px;
+        }
+    }
+}
+
+.abstract {
+    height: 300px;
+    width: 300px;
+    position: relative;
+    z-index : 1;
+    background: green;
+
+    &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: "";
+        width: 50%;
+        border-bottom:1px solid magenta;
+    }
+
+    &:after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: "";
+        height: 50%;
+        border-left: 1px solid magenta;
+    }
+}
