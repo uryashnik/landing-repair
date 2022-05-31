@@ -1,0 +1,84 @@
+@import '../constants.scss';
+
+.navigation {
+    font-size: 18px;
+    line-height: 23px;
+    font-weight: 300;
+
+    ul {
+        display: flex;
+
+        :not(:last-child) {
+            margin-right: 20px;
+        }
+    }
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__logo {
+        width: 176px;
+        height: 72px;
+
+        @include media-sm() {
+            width: 130px;
+            height: 53px;
+        }
+    }
+
+    &__menu {
+        @include media-lg() {
+            order: 2;
+        }
+    }
+
+    &__nav-desktop {
+        @include media-lg() {
+            display: none;
+        }
+    }
+
+    &__nav-icon {
+        position: relative;
+        width: 30px;
+        height: 20px;
+        // todo добавить анимацию иконке и меню
+        //background: url(".") no-repeat center;
+        //background-size: contain;
+        display: none;
+
+        @include media-lg() {
+            display: block;
+            z-index: 100;
+        }
+    }
+
+    &__contacts {
+        display: flex;
+        align-items: center;
+        font-size: 24px;
+        line-height: 31px;
+        font-weight: 600;
+        white-space: nowrap;
+
+        @include media-sm() {
+            font-size: 16px;
+            line-height: 22px;
+        }
+    }
+
+    &__callback {
+        margin-left: 40px;
+
+        @include media-sm() {
+            display: none;
+            margin-left: 0;
+        }
+
+    }
+
+
+}

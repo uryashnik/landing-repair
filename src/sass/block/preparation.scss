@@ -1,0 +1,340 @@
+@import '../constants.scss';
+
+.preparation {
+    background-color: $bg-dark;
+    margin-bottom: 100px;
+    &__content {
+        @include content-wrapper();
+        padding: 100px 70px;
+
+        @include media-lg() {
+            padding: 100px 20px;
+        }
+    }
+
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 95px;
+        @include media-lg() {
+            flex-direction: column;
+        }
+    }
+
+    &__desc {
+        max-width: 615px;
+        margin-right: 50px;
+
+        @include media-lg() {
+            margin-right: 0;
+            max-width: 100%;
+            margin-bottom: 50px;
+        }
+    }
+
+    &__title {
+        font-size: 48px;
+        line-height: 1.3;
+        margin-bottom: 50px;
+
+        @include media-md() {
+            font-size: 40px;
+        }
+
+        @include media-sm() {
+            font-size: 36px;
+        }
+    }
+
+    &__list {
+        position: relative;
+        padding-left: 52px; // отступ для маркера
+
+        @include media-sm() {
+            font-size: 18px;
+        }
+    }
+
+    &__text {
+        margin-bottom: 20px;
+
+        &:before {
+            position: absolute;
+            content: "";
+            top: 6px;
+            left: 6px;
+            width: 0;
+            height: 0;
+            border-top: 20px solid $bg-active;
+            border-right: 20px solid transparent;
+        }
+    }
+
+    &__example {
+        max-width: 746px;
+        width: 100%;
+
+        @include media-lg() {
+            max-width: 100%;
+        }
+    }
+
+    &__project {
+        display: flex;
+        justify-content: space-between;
+
+        @include media-lg(){
+            flex-direction: column;
+        }
+
+    }
+
+    &__calc {
+        max-width: 1034px;
+        margin-right: 100px;
+
+        @include media-lg(){
+            max-width: none;
+            width: 100%;
+            margin-right: 0;
+            margin-bottom: 50px;
+        }
+    }
+
+    &__controls {
+        display: flex;
+        flex-direction: column;
+
+        @include media-lg(){
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: nowrap;
+        }
+
+        @include media-sm(){
+            flex-wrap: wrap;
+        }
+    }
+
+    &__btn {
+        padding: 50px;
+        max-width: 430px;
+        font-size: 36px;
+        line-height: 1.3;
+        white-space: pre-wrap;
+        background-color: transparent;
+        border: 1px solid transparent;
+        border-image: linear-gradient(to right bottom, $bg-active, $bg-accent) 1 1;
+
+        &:first-child{
+            margin-bottom: 50px;
+        }
+
+        @include media-lg(){
+            flex-direction: row;
+            justify-content: space-between;
+            flex-shrink: 1;
+            &:first-child{
+                margin-bottom: 0;
+                margin-right: 50px;
+            }
+        }
+
+        @include media-sm(){
+            max-width: 100%;
+            flex-grow: 1;
+
+            &:first-child{
+                margin-right: 0;
+                margin-bottom: 50px;
+            }
+        }
+    }
+
+}
+
+.example {
+    position: relative;
+
+    &__img {
+        width: 100%;
+    }
+
+    &__text {
+        top: 15%;
+        left: 10%;
+        position: absolute;
+        font-size: 48px;
+
+        @include media-sm() {
+            font-size: 36px;
+        }
+    }
+
+}
+
+.calculator {
+    background-color: $bg-white;
+    color: $base-text-color-dark;
+
+    &__content {
+        padding: 50px 50px 35px;
+
+        @include media-sm(){
+            padding: 30px;
+        }
+    }
+
+    &__title {
+        font-size: 40px;
+        margin-bottom: 50px;
+    }
+
+    &__types {
+        margin-bottom: 30px;
+    }
+
+    &__terms {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    &__text {
+        font-size: 12px;
+        margin-right: 30px;
+
+        @include media-md(){
+            margin-left: 160px;
+        }
+
+        @include media-sm(){
+            margin-left: 45px;
+        }
+
+        &_warning {
+            color: $bg-accent;
+        }
+    }
+
+}
+
+.types {
+    &__label {
+        font-size: 16px;
+        color: $base-text-color-secondary;
+        margin-bottom: 10px;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__chips {
+        padding: 16px 20px;
+        color: $base-text-color-dark;
+        transition: border 0.5s ease;
+        white-space: nowrap;
+        margin-bottom: 20px;
+
+        &_active {
+            border: 1px solid $bg-accent;
+        }
+    }
+}
+
+.square {
+    margin-bottom: 50px;
+
+    &__label {
+        font-size: 16px;
+        color: $base-text-color-secondary;
+        margin-bottom: 16px;
+    }
+}
+
+.range {
+    display: flex;
+    width: 450px + 90px;
+
+    @include media-sm(){
+        width: 100%;
+    }
+
+    &__field {
+        position: relative;
+        flex-grow: 1;
+        margin-right: 20px;
+    }
+    &__start {
+        position: absolute;
+        background-color: $bg-accent;
+        height: 20px;
+        width: 20px;
+        top: 14px;
+        left: 0;
+        border-radius: 50%;
+    }
+
+    &__input {
+        width: 100%;
+        -webkit-appearance: none;
+        margin-bottom: 20px;
+
+        &::-webkit-slider-thumb {
+            position: relative;
+            z-index: 2;
+            -webkit-appearance: none;
+            background-color: $bg-white;
+            height: 20px;
+            width: 20px;
+            margin-top: -9px;
+            border-radius: 50%;
+            border: 2px solid $bg-accent;
+        }
+
+        &::-webkit-slider-runnable-track {
+            height: 1px;
+            cursor: pointer;
+            background: #797979;
+        }
+    }
+
+    &__values {
+        display: flex;
+        justify-content: space-between;
+        font-size: 16px;
+        line-height: 18px;
+    }
+
+    &__total {
+        font-size: 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 70px;
+        height: 40px;
+        padding: 10px;
+        border: 1px solid $bg-accent;
+    }
+
+}
+
+.phone {
+    &__label {
+        font-size: 16px;
+        color: $base-text-color-secondary;
+        margin-bottom: 16px;
+    }
+
+    &__input {
+        border: 1px solid $bg-accent;
+        padding: 16px 20px;
+        font-size: 16px;
+        line-height: 24px;
+        width: 100%;
+        max-width: 280px;
+    }
+}

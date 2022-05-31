@@ -1,0 +1,28 @@
+@mixin content-wrapper {
+    margin: 0 auto;
+    max-width: 1920px;
+}
+
+@mixin media-xl() {
+    @media only screen and (max-width: 1920px) {
+        @content;
+    }
+}
+
+@mixin media-lg() {
+    @media only screen and (max-width: 1400px) {
+        @content;
+    }
+}
+
+@mixin media-md(){
+    @media only screen and (max-width: 992px) {
+        @content;
+    }
+}
+
+@mixin media-sm(){
+    @media only screen and (max-width: 768px) {
+        @content;
+    }
+}

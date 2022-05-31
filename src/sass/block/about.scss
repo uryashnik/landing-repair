@@ -1,15 +1,77 @@
 @import '../constants.scss';
 
-.choice {
+.about {
     background-color: $bg-dark;
 
     &__content {
+        display: flex;
+        justify-content: space-between;
+
         @include content-wrapper();
         padding: 100px 70px;
 
         @include media-lg() {
             padding: 100px 20px;
         }
+    }
+
+    &__description {
+        max-width: 1030px;
+    }
+
+    &__title {
+        font-size: 48px;
+        font-weight: bold;
+        margin-bottom: 20px;
+
+        @include media-md(){
+            font-size: 40px;
+        }
+
+        @include media-sm(){
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__text {
+        font-size: 20px;
+
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__subtitle {
+        font-weight: 400;
+        margin-bottom: 30px;
+    }
+
+    &__statistics {
+
+    }
+
+}
+
+.statistics {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 250px 250px;
+
+    &__year {
+
+    }
+
+    &__users {
+
+    }
+
+    &__completed {
+
+    }
+
+    &__warranty {
+
     }
 }
 

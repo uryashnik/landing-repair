@@ -5,11 +5,141 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap"
+          rel="stylesheet">
     <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
-    <div class="fontNormal">Тестовый normal</div>
-    <div class="fontBold">Тестовый bold</div>
-    <div>Стандартный текс</div>
+<section class="preview">
+    <div class="preview__adaptive-menu"></div>
+    <div class="preview__content">
+        <header class="header preview__header">
+            <img class="header__logo" src="./img/logo.png" alt="logo" class="logo">
+            <div class="header__menu">
+                <nav class="navigation header__nav-desktop">
+                    <ul>
+                        <li><a href="">Главная</a></li>
+                        <li><a href="">Услуги</a></li>
+                        <li><a href="">О Нас</a></li>
+                        <li><a href="">Портфолио</a></li>
+                        <li><a href="">Контакты</a></li>
+                        <li><a href="">Отзывы</a></li>
+                    </ul>
+                </nav>
+                <img class="header__nav-icon" src="./img/burger.png">
+            </div>
+            <div class="header__contacts">
+                <span>+380-67-123-45-67</span>
+                <button class="btn-primary header__callback">Заказать звонок</button>
+            </div>
+        </header>
+        <div class="preview__description">
+            <div class="preview__title">Профессиональный ремонт и отделка недвижимости «под&nbsp;ключ»</div>
+            <div class="preview__subtitle">с фиксированной датой и ценой по договору в г.Днепропетровск и пригороде
+            </div>
+        </div>
+        <div class="preview__controls">
+            <button class="btn-primary preview__calc">Рассчитать стоимость</button>
+            <button class="btn-primary">Оставить заявку</button>
+        </div>
+    </div>
+</section>
+<section class="preparation">
+    <div class="preparation__content">
+        <div class="preparation__info">
+            <div class="preparation__desc">
+                <div class="preparation__title"><b>РЕМОНТ - </b>ДЕЛО ОТВЕТСТВЕННОЕ</div>
+                <div class="preparation__list">
+                    <div class="preparation__text">Вы хотите отремонтировать свой дом? Мы поможем вам воплотить мечту.
+                    </div>
+                    <div>Самый важный результат в нашей работе — репутация компании
+                        и счастливые обладатели комфортного жилья.
+                    </div>
+                </div>
+            </div>
+            <div class="example preparation__example">
+                <img class="example__img" src="./img/room.png"/>
+                <b class="example__text">Посмотрите <br/>наши работы</b>
+            </div>
+        </div>
+        <div class="preparation__project">
+            <div class="calculator preparation__calc">
+                <div class="calculator__content">
+                    <div class="calculator__title">Посчитайте ремонт вашего дома</div>
+                    <div class="types calculator__types">
+                        <div class="types__label">Тип объекта</div>
+                        <div class="types__list">
+                            <div class="types__chips types__chips_active">Квартира новостройка</div>
+                            <div class="types__chips">Квартира вторичка</div>
+                            <div class="types__chips">Дом/коттедж</div>
+                            <div class="types__chips">Коммерция</div>
+                        </div>
+                    </div>
+                    <div class="types calculator__types">
+                        <div class="types__label">Тип объекта</div>
+                        <div class="types__list">
+                            <div class="types__chips types__chips_active">Косметический</div>
+                            <div class="types__chips">Капитальный</div>
+                            <div class="types__chips">Дизайнерский</div>
+                        </div>
+                    </div>
+                    <div class="square">
+                        <div class="square__label">Площадь</div>
+                        <div class="range">
+                            <div class="range__field">
+                                <div class="range__start"></div>
+                                <input class="range__input" type="range" value="20" min="20" max="200" step="5"/>
+                                <div class="range__values"><span>20</span><span>200</span></div>
+                            </div>
+                            <div class="range__total">
+                                <span class="range__result">20</span>
+                                <span>м</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="phone">
+                        <div class="phone__label">Ваш телефон</div>
+                        <input class="phone__input" type="text" placeholder="+380-123-45-67"/>
+                    </div>
+                </div>
+                <div class="calculator__terms">
+                    <div class="calculator__text">Нажимая на кнопку, Вы соглашаетесь с условиями <span
+                            class="calculator__text_warning">обработки персональных данных</span></div>
+                    <button class="btn-primary">Рассчитать</button>
+                </div>
+            </div>
+            <div class="preparation__controls">
+                <button class="btn-accent preparation__btn">У меня свой дизайн-проект</button>
+                <button class="btn-accent preparation__btn">Нужна помощь специалиста</button>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="about">
+    <div class="about__content">
+        <div class="about__description">
+            <div class="about__title">МЫ — КОМПАНИЯ<br/>
+                «СТРОЙТАТ»
+            </div>
+            <div class="about__text">Доброго вам времени суток! Давайте знакомиться!</div>
+            <div class="about__subtitle">Занимаемся ремонтом недвижимости любой сложности «под ключ»</div>
+            <div class="about__text">Наша деятельность успешно распространяется в г. Днепропетровск.</div>
+            <div class="about__text">Мы всегда готовы предложить услуги по ремонту и отделке комфортного и уютного
+                гнёздышка по готовому или индивидуальному проекту. Мы ориентируемся на качество и сроки ремонта, чтобы
+                все наши клиенты остались довольны сотрудничеством и могли в полной мере насладиться комфортом в домах.
+            </div>
+            <div class="about__text">Мы ремонтируем недвижимость применяя современные техники и технологии</div>
+        </div>
+        <div class="statistics about_statistics">
+            <div class="statistics__year">2007</div>
+            <div class="statistics__users">250+</div>
+            <div class="statistics__completed">2007</div>
+            <div class="statistics__warranty">250+</div>
+        </div>
+    </div>
+</section>
+<script src="./js/main.js"></script>
 </body>
 </html>

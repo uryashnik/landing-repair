@@ -1,0 +1,53 @@
+@import 'constants.scss';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+ul {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+a {
+    color: $base-text-color;
+    text-decoration: none;
+}
+
+h2 {
+    font-size: 48px;
+    line-height: 64px;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 32px;
+    line-height: 41px;
+    font-weight: 600;
+}
+
+button {
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 300;
+    padding: 16px 30px;
+    border: none;
+    color: $base-text-color;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: $bg-accent;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+
+    &:hover {
+        background-color: $bg-active;
+    };
+}

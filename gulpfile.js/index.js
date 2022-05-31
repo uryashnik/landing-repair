@@ -22,8 +22,8 @@ const server = require('./task/server');
 
 // Наблюдение
 const watcher = () => {
-    $.gulp.watch($.path.pug.watch, pug).on('all', $.browserSync.reload);
-    // $.gulp.watch($.path.html.watch, html).on('all', $.browserSync.reload);
+    // $.gulp.watch($.path.pug.watch, pug).on('all', $.browserSync.reload);
+    $.gulp.watch($.path.html.watch, html).on('all', $.browserSync.reload);
     // // $.gulp.watch(path.css.watch, css).on('all', $.browserSync.reload);
     $.gulp.watch($.path.scss.watch, scss).on('all', $.browserSync.reload);
     $.gulp.watch($.path.js.watch, js).on('all', $.browserSync.reload);
