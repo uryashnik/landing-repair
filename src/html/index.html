@@ -10,6 +10,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap"
           rel="stylesheet">
     <link rel="stylesheet" href="./css/main.css">
+    <link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.5.3/dist/css/swiffy-slider.min.css" rel="stylesheet"
+          crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.5.3/dist/js/swiffy-slider.min.js" crossorigin="anonymous"
+            defer></script>
 </head>
 <body>
 <section class="preview">
@@ -131,15 +135,151 @@
                 все наши клиенты остались довольны сотрудничеством и могли в полной мере насладиться комфортом в домах.
             </div>
             <div class="about__text">Мы ремонтируем недвижимость применяя современные техники и технологии</div>
+            <div class="benefit about__benefit">
+                <div>
+                    <img src="./img/letter.svg" alt="" class="benefit__img">
+                    <div class="benefit__text">поэтапная работа</div>
+                </div>
+                <div>
+                    <img src="./img/timer.svg" alt="" class="benefit__img">
+                    <div class="benefit__text">по договору точно в срок</div>
+                </div>
+                <div>
+                    <img src="./img/quality.svg" alt="" class="benefit__img">
+                    <div class="benefit__text">многоуровневый контроль качества</div>
+                </div>
+                <div>
+                    <img src="./img/price.svg" alt="" class="benefit__img">
+                    <div class="benefit__text">лучшая цена на рынке</div>
+                </div>
+            </div>
         </div>
-        <div class="statistics about_statistics">
-            <div class="statistics__year">2007</div>
-            <div class="statistics__users">250+</div>
-            <div class="statistics__completed">2007</div>
-            <div class="statistics__warranty">250+</div>
+        <div class="statistics about__statistics">
+            <div class="statistics__year">
+                <div class="statistics__amount">2007</div>
+                <div class="statistics__text">год основания компании</div>
+            </div>
+            <div class="statistics__users">
+                <div class="statistics__amount">250+</div>
+                <div class="statistics__text">довольных<br/>клиентов</div>
+            </div>
+            <div class="statistics__completed">
+                <div class="statistics__amount">
+                    2007
+                </div>
+                <div class="statistics__text">выполненных ремонтов</div>
+            </div>
+            <div class="statistics__warranty">
+                <div class="statistics__amount">250+</div>
+                <div class="statistics__text">лет гарантии</div>
+            </div>
         </div>
     </div>
 </section>
+<section class="tariffs">
+    <div class="tariffs__content">
+        <div class="tariffs__title">3 варианта ремонта на ваш выбор</div>
+        <div class="tariffs__carts">
+            <div class="cart">
+                <div class="cart__title">ХОРОШИЙ КОСМЕТИЧЕСКИЙ РЕМОНТ</div>
+                <div class="cart__price">от 1000 руб./м2</div>
+                <div class="cart__divider"></div>
+                <div class="cart__example">
+                    <div class="cart__usage">Подойдет:</div>
+                    <div class="cart__usage">Чтобы освежить квартиру</div>
+                    <div class="cart__usage">Для сдачи в аренду</div>
+                    <div class="cart__usage">Для предпродажной подготовки</div>
+                </div>
+                <a class="cart__link" href="#">Посмотреть список работ</a>
+                <button class="btn-primary">ЗАКАЗАТЬ</button>
+            </div>
+            <div class="cart">
+                <div class="cart__title">СЕРЬЕЗНЫЙ КАПИТАЛЬНЫЙ РЕМОНТ</div>
+                <div class="cart__price">от 1800 руб./м2</div>
+                <div class="cart__divider"></div>
+                <div class="cart__example">
+                    <div class="cart__usage">Подойдет:</div>
+                    <div class="cart__usage">Для ремонта новостроек</div>
+                    <div class="cart__usage">Для ремонта коттеджа</div>
+                    <div class="cart__usage">Чтобы полностью отремонтировать квартиру</div>
+                </div>
+                <a class="cart__link" href="#">Посмотреть список работ</a>
+                <button class="btn-primary">ЗАКАЗАТЬ</button>
+            </div>
+            <div class="cart">
+                <div class="cart__title">СТИЛЬНЫЙ ДИЗАЙНЕРСКИЙ РЕМОНТ</div>
+                <div class="cart__price">от 1800 руб./м2</div>
+                <div class="cart__divider"></div>
+                <div class="cart__example">
+                    <div class="cart__usage">Подойдет:</div>
+                    <div class="cart__usage">Для авторского дизайна</div>
+                    <div class="cart__usage">Для применения сложных технологий</div>
+                    <div class="cart__usage">Для роскошной жизни</div>
+                </div>
+                <a class="cart__link" href="#">Посмотреть список работ</a>
+                <button class="btn-primary">ЗАКАЗАТЬ</button>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="works">
+    <div class="works__content">
+        <div class="works__heading">
+            <div class="works__title">НАШИ РАБОТЫ</div>
+            <button class="works__show-all">Смотреть все</button>
+        </div>
+        <div class="works__slider">
+            <div class="swiffy-slider">
+                <ul class="slider-container">
+                    <li>
+                        <div class="slide">
+                            <img class="slide__image" src="./img/slide1.jpg" style="max-width: 100%;height: auto;">
+                            <div class="additional slide__info">
+                                <div class="additional__title">Ремонт 3-х комнатной квартиры</div>
+                                <div><span class="additional__key">Адрес объекта:</span>&nbsp;<span class="additional__value">МЖК Sunrice City</span></div>
+                                <div><span class="additional__key">Площадь:</span>&nbsp;<span class="additional__value">110 м2</span></div>
+                                <div><span class="additional__key">Срок выполнения:</span>&nbsp;<span class="additional__value">25 дней</span></div>
+                                <div><span class="additional__key">Стоимость ремонта:</span>&nbsp;<span class="additional__value">250 000 рублей</span></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="slide">
+                            <img class="slide__image" src="./img/slide1.jpg" style="max-width: 100%;height: auto;">
+                            <div class="additional slide__info">
+                                <div class="additional__title">Ремонт 3-х комнатной квартиры</div>
+                                <div><span class="additional__key">Адрес объекта:</span>&nbsp;<span class="additional__value">МЖК Sunrice City</span></div>
+                                <div><span class="additional__key">Площадь:</span>&nbsp;<span class="additional__value">110 м2</span></div>
+                                <div><span class="additional__key">Срок выполнения:</span>&nbsp;<span class="additional__value">25 дней</span></div>
+                                <div><span class="additional__key">Стоимость ремонта:</span>&nbsp;<span class="additional__value">250 000 рублей</span></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="slide">
+                            <img class="slide__image" src="./img/slide1.jpg" style="max-width: 100%;height: auto;">
+                            <div class="additional slide__info">
+                                <div class="additional__title">Ремонт 3-х комнатной квартиры</div>
+                                <div><span class="additional__key">Адрес объекта:</span>&nbsp;<span class="additional__value">МЖК Sunrice City</span></div>
+                                <div><span class="additional__key">Площадь:</span>&nbsp;<span class="additional__value">110 м2</span></div>
+                                <div><span class="additional__key">Срок выполнения:</span>&nbsp;<span class="additional__value">25 дней</span></div>
+                                <div><span class="additional__key">Стоимость ремонта:</span>&nbsp;<span class="additional__value">250 000 рублей</span></div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <button type="button" class="slider-nav"></button>
+                <button type="button" class="slider-nav slider-nav-next"></button>
+                <div class="slider-indicators">
+                    <button class="active"></button>
+                    <button></button>
+                    <button></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <script src="./js/main.js"></script>
 </body>
 </html>

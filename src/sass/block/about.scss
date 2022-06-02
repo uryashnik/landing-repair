@@ -12,11 +12,19 @@
 
         @include media-lg() {
             padding: 100px 20px;
+            flex-direction: column;
         }
     }
 
     &__description {
         max-width: 1030px;
+        margin-right: 100px;
+
+        @include media-lg(){
+            max-width: 100%;
+            margin-right: 0;
+            margin-bottom: 64px;
+        }
     }
 
     &__title {
@@ -24,13 +32,13 @@
         font-weight: bold;
         margin-bottom: 20px;
 
-        @include media-md(){
+        @include media-md() {
             font-size: 40px;
         }
 
-        @include media-sm(){
+        @include media-sm() {
             font-size: 36px;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
     }
 
@@ -47,56 +55,149 @@
         margin-bottom: 30px;
     }
 
-    &__statistics {
+    &__benefit {
+        display: grid;
+        grid-template-columns: repeat(4, 160px);
+        grid-template-rows: auto;
+        grid-column-gap: 10%;
+        grid-row-gap: 30px;
 
+        @include media-md(){
+            grid-template-columns: repeat(3, 160px);
+        }
+
+        @include media-sm(){
+            grid-template-columns: repeat(2, 140px);
+        }
     }
 
+    &__statistics {
+        flex-shrink: 0;
+        width: 500px;
+
+        @include media-sm(){
+            width: 100%;
+            max-width: 500px;
+        }
+    }
+}
+
+.benefit {
+    &__img {
+        margin-bottom: 10px;
+    }
+
+    &__text {
+        font-size: 16px;
+    }
+}
+
+@mixin statisticsItem() {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 20px;
+    position: relative;
 }
 
 .statistics {
     display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 250px 250px;
+    grid-template-rows: 250px 250px;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
 
     &__year {
+        @include statisticsItem();
 
+        &:before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: "";
+            width: 50%;
+            height: 50%;
+            border-top: 1px solid $bg-accent;
+            border-left: 1px solid $bg-accent;
+        }
     }
 
     &__users {
+        @include statisticsItem();
+        &:before {
+            position: absolute;
+            top: 0;
+            right: 0;
+            content: "";
+            width: 50%;
+            height: 50%;
+            border-top: 1px solid $bg-accent;
+            border-right: 1px solid $bg-accent;
+        }
 
+        &:after {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            content: "";
+            width: 50%;
+            height: 50%;
+            border-bottom: 1px solid $bg-accent;
+            border-left: 1px solid $bg-accent;
+        }
     }
 
     &__completed {
+        @include statisticsItem();
+        &:before {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            content: "";
+            width: 40%;
+            height: 100px;
+            border-left: 1px solid $bg-accent;
+            border-bottom: 1px solid $bg-accent;
+        }
 
+        &:after {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            content: "";
+            width: 40%;
+            height: 80%;
+            border-bottom: 1px solid $bg-accent;
+            border-right: 1px solid $bg-accent;
+        }
     }
 
     &__warranty {
+        @include statisticsItem();
 
+        &:before {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            content: "";
+            width: 80%;
+            height: 100%;
+            border-bottom: 1px solid $bg-accent;
+            border-right: 1px solid $bg-accent;
+        }
+    }
+
+    &__amount {
+        text-align: center;
+        margin-bottom: 5px;
+        font-size: 48px;
+    }
+
+    &__text {
+        text-align: center;
+        font-size: 16px;
+        font-weight: bold;
     }
 }
 
-.abstract {
-    height: 300px;
-    width: 300px;
-    position: relative;
-    z-index : 1;
-    background: green;
 
-    &:before {
-        position: absolute;
-        top: 0;
-        left: 0;
-        content: "";
-        width: 50%;
-        border-bottom:1px solid magenta;
-    }
-
-    &:after {
-        position: absolute;
-        top: 0;
-        left: 0;
-        content: "";
-        height: 50%;
-        border-left: 1px solid magenta;
-    }
-}

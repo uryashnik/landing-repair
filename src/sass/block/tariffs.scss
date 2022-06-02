@@ -1,0 +1,96 @@
+@import '../constants.scss';
+
+.tariffs {
+    &__content {
+        @include content-wrapper();
+        padding: 100px 70px;
+
+        @include media-lg() {
+            padding: 100px 20px;
+        }
+    }
+
+    &__title {
+        color: $base-text-color-dark;
+        font-size: 48px;
+        margin-bottom: 50px;
+        font-weight: bold;
+
+        @include media-sm(){
+            font-size: 36px;
+            margin-bottom: 60px;
+        }
+
+    }
+
+    &__carts {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        grid-column-gap: 60px;
+        grid-row-gap: 50px;
+
+        @include media-lg(){
+            grid-column-gap: 30px;
+        }
+
+        @include media-md(){
+            grid-template-columns: 1fr;
+        }
+
+        @include media-sm(){
+            grid-row-gap: 30px;
+        }
+    }
+}
+
+.cart {
+    padding: 50px;
+    background-color: $bg-dark;
+
+    @include media-lg(){
+        padding: 20px;
+    }
+
+    &__title {
+        font-size: 32px;
+        font-weight: 600;
+        margin-bottom: 40px;
+
+        @include media-lg(){
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+    }
+
+    &__price {
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
+
+    &__divider {
+        height: 1px;
+        background-color: $bg-divider;
+        margin-bottom: 30px;
+    }
+
+    &__example {
+        margin-bottom: 20px;
+    }
+
+    &__usage {
+        margin-bottom: 15px;
+
+        @include media-md(){
+            display: none;
+        }
+    }
+
+    &__link {
+        color: $bg-accent;
+        text-decoration: underline;
+        cursor: pointer;
+        margin-bottom: 40px;
+        display: block;
+    }
+}
