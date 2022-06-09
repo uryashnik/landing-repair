@@ -1,0 +1,99 @@
+.footer {
+    background-color: $bg-dark;
+
+    &__content {
+        @include content-wrapper();
+        padding: 100px 70px;
+
+        @include media-lg() {
+            padding: 100px 20px;
+        }
+    }
+
+    &__main {
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        justify-content: space-between;
+        margin-bottom: 50px;
+
+        @include media-lg(){
+            grid-template-columns: repeat(3, auto);
+            grid-row-gap: 50px;
+        }
+
+        @include media-md(){
+            grid-template-columns: repeat(2, auto);
+        }
+
+        @include media-sm(){
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__column {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__logo {
+        margin-bottom: 28px;
+    }
+
+    &__link {
+        font-size: 16px;
+
+        &_accent {
+            text-decoration: underline;
+            color: $bg-accent;
+
+            &:not(:last-child) {
+                margin-bottom: 15px;
+            }
+        }
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 4px;
+        }
+    }
+
+    &__title {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 18px;
+    }
+
+    &__item {
+        font-size: 16px;
+
+        &:not(:last-child) {
+            margin-bottom: 4px;
+        }
+    }
+
+    &__phone {
+        margin-bottom: 4px;
+    }
+
+    &__email {
+        font-size: 20px;
+        margin-bottom: 6px;
+    }
+
+    &__whatsApp {
+        display: flex;
+    }
+
+    &__wtiteToWhatsApp {
+        margin-left: 12px;
+        font-size: 20px;
+    }
+
+    &__copyright {
+        color: #6D7B8C;
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,70 @@
+@import '../constants.scss';
+
+.services {
+    margin-bottom: 100px;
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        grid-gap: 50px;
+
+        @include content-wrapper();
+        padding: 0 70px;
+
+        @include media-lg(){
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 30px;
+            padding: 0 20px;
+        }
+
+        @include media-sm(){
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__title {
+        color: $base-text-color-dark;
+        font-size: 48px;
+        margin-bottom: 70px;
+
+        @include media-md(){
+            margin-bottom: 50px;
+            font-size: 40px;
+        }
+
+        @include media-sm(){
+            font-size: 36px;
+        }
+    }
+
+    &__show-all {
+        background-color: transparent;
+        color: $base-text-color-dark;
+        border: 4px solid $bg-accent;
+    }
+}
+
+.service {
+    background-color: $bg-dark;
+    padding: 40px;
+
+    &__title {
+        font-weight: bold;
+        margin-bottom: 20px;
+
+        @include media-lg(){
+            font-size: 20px;
+        }
+    }
+
+    &__price {
+        font-weight: bold;
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+
+    &__text {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+}

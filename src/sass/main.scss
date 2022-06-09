@@ -1,20 +1,96 @@
 @import 'constants.scss';
 @import 'mixins.scss';
 @import './components.scss';
+@import './block/popup.scss';
+@import './block/navigation.scss';
 @import './block/header.scss';
 @import './block/preview.scss';
 @import './block/preparation.scss';
 @import './block/about.scss';
 @import './block/tariffs.scss';
 @import './block/works.scss';
+@import './block/scheme.scss';
+@import './block/proposal.scss';
+@import './block/comments.scss';
+@import './block/services.scss';
+@import './block/discussion.scss';
+@import './block/faq.scss';
+@import './block/operation.scss';
+@import './block/footer.scss';
 
 body {
     font-family: 'Montserrat', sans-serif;
     line-height: $base-line-height;
     font-size: $base-font-size;
     color: $base-text-color;
+    position: relative;
 
-    @include media-lg(){
+    @include media-lg() {
         background-color: $bg-white;
     }
+
+    .navigation-icon {
+        z-index: 6;
+        top: 52px;
+        right: 26px;
+        width: 30px;
+        height: 21px;
+        position: fixed;
+        transform: rotate(0deg);
+        transition: .5s ease-in-out;
+        cursor: pointer;
+        display: none;
+
+        @include media-lg(){
+            display: block;
+        }
+    }
+
+    .navigation-icon span {
+        display: block;
+        position: absolute;
+        height: 3px;
+        width: 100%;
+        background: $bg-white;
+        border-radius: 3px;
+        opacity: 1;
+        left: 0;
+        transform: rotate(0deg);
+        transition: .25s ease-in-out;
+    }
+
+    .navigation-icon span:nth-child(1) {
+        top: 0px;
+    }
+
+    .navigation-icon span:nth-child(2),
+    .navigation-icon span:nth-child(3) {
+        top: 9px;
+    }
+
+    .navigation-icon span:nth-child(4) {
+        top: 18px;
+    }
+
+    .navigation-icon.navigation-icon_open span:nth-child(1) {
+        top: 9px;
+        width: 0%;
+        left: 50%;
+    }
+
+    .navigation-icon.navigation-icon_open span:nth-child(2) {
+        transform: rotate(45deg);
+    }
+
+    .navigation-icon.navigation-icon_open span:nth-child(3) {
+        transform: rotate(-45deg);
+    }
+
+    .navigation-icon.navigation-icon_open span:nth-child(4) {
+        top: 9px;
+        width: 0%;
+        left: 50%;
+    }
 }
+
+

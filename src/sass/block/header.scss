@@ -1,19 +1,5 @@
 @import '../constants.scss';
 
-.navigation {
-    font-size: 18px;
-    line-height: 23px;
-    font-weight: 300;
-
-    ul {
-        display: flex;
-
-        :not(:last-child) {
-            margin-right: 20px;
-        }
-    }
-}
-
 .header {
     display: flex;
     justify-content: space-between;
@@ -41,18 +27,13 @@
         }
     }
 
-    &__nav-icon {
-        position: relative;
+    &__nav-blank {
         width: 30px;
         height: 20px;
-        // todo добавить анимацию иконке и меню
-        //background: url(".") no-repeat center;
-        //background-size: contain;
         display: none;
 
         @include media-lg() {
             display: block;
-            z-index: 100;
         }
     }
 

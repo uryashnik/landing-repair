@@ -1,0 +1,22 @@
+.navigation {
+    font-size: 18px;
+    line-height: 23px;
+    font-weight: 300;
+
+    ul {
+        display: flex;
+
+        :not(:last-child) {
+            margin-right: 20px;
+        }
+
+        @include media-sm(){
+            flex-direction: column;
+
+            :not(:last-child) {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
