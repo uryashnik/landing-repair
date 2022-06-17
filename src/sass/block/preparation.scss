@@ -235,13 +235,24 @@
     &__chips {
         padding: 16px 20px;
         color: $base-text-color-dark;
-        transition: border 0.5s ease;
+        transition: border 0.1s ease;
         white-space: nowrap;
         margin-bottom: 20px;
+        border: 1px solid transparent;
 
         &_active {
-            border: 1px solid $bg-accent;
+            border-color: $bg-accent;
         }
+
+        @include media-sm(){
+            white-space: break-spaces;
+        }
+    }
+
+    &__input {
+        visibility: hidden;
+        width: 0;
+        height: 0;
     }
 }
 

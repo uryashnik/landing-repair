@@ -30,7 +30,8 @@
                 <input name="name" class="order__input" type="text" placeholder="Имя"/>
                 <input name="phone" class="order__input" type="text" placeholder="Ваш Телефон"/>
             </div>
-            <input name="description" class="order__input order__input_textArea" type="text" placeholder="Комментарий к заявке"/>
+            <input name="description" class="order__input order__input_textArea" type="text"
+                   placeholder="Комментарий к заявке"/>
             <div class="order__bottom">
                 <div class="order__terms">Нажимая на кнопку, Вы соглашаетесь с условиями <span class="order__accent">обработки персональных данных</span>
                 </div>
@@ -109,32 +110,35 @@
             </div>
         </div>
         <div class="preparation__project">
-            <div class="calculator preparation__calc">
+            <form action="" method="post" class="calculator preparation__calc">
                 <div class="calculator__content">
                     <div class="calculator__title">Посчитайте ремонт вашего дома</div>
                     <div class="types calculator__types">
                         <div class="types__label">Тип объекта</div>
                         <div class="types__list">
-                            <div class="types__chips types__chips_active">Квартира новостройка</div>
-                            <div class="types__chips">Квартира вторичка</div>
-                            <div class="types__chips">Дом/коттедж</div>
-                            <div class="types__chips">Коммерция</div>
+                            <label for="objectType" class="types__chips types__chips_active" id="1">Квартира новостройка</label>
+                            <label for="objectType" class="types__chips" id="2">Квартира вторичка</label>
+                            <label for="objectType" class="types__chips" id="3">Дом/коттедж</label>
+                            <label for="objectType" class="types__chips" id="4">Коммерция</label>
                         </div>
+                        <input id="objectType" class="types__input" value="1" name="objectType" type="text">
                     </div>
                     <div class="types calculator__types">
-                        <div class="types__label">Тип объекта</div>
+                        <div class="types__label">Вид ремонта</div>
                         <div class="types__list">
-                            <div class="types__chips types__chips_active">Косметический</div>
-                            <div class="types__chips">Капитальный</div>
-                            <div class="types__chips">Дизайнерский</div>
+                            <div class="types__chips types__chips_active" id="5">Косметический</div>
+                            <div class="types__chips" id="6">Капитальный</div>
+                            <div class="types__chips" id="7">Дизайнерский</div>
                         </div>
+                        <input class="types__input" value="5" name="repairType" type="text">
                     </div>
                     <div class="square">
                         <div class="square__label">Площадь</div>
                         <div class="range">
                             <div class="range__field">
                                 <div class="range__start"></div>
-                                <input class="range__input" type="range" value="20" min="20" max="200" step="5"/>
+                                <input name="square" class="range__input" type="range" value="20" min="20" max="200"
+                                       step="5"/>
                                 <div class="range__values"><span>20</span><span>200</span></div>
                             </div>
                             <div class="range__total">
@@ -145,15 +149,15 @@
                     </div>
                     <div class="phone">
                         <div class="phone__label">Ваш телефон</div>
-                        <input class="phone__input" type="text" placeholder="+380-123-45-67"/>
+                        <input name="phone" class="phone__input" type="text" placeholder="+380-123-45-67"/>
                     </div>
                 </div>
                 <div class="calculator__terms">
                     <div class="calculator__text">Нажимая на кнопку, Вы соглашаетесь с условиями <span
                             class="calculator__text_warning">обработки персональных данных</span></div>
-                    <button class="btn-primary">Рассчитать</button>
+                    <button type="submit" class="btn-primary">Рассчитать</button>
                 </div>
-            </div>
+            </form>
             <div class="preparation__controls">
                 <button class="btn-accent preparation__btn">У меня свой дизайн-проект</button>
                 <button class="btn-accent preparation__btn">Нужна помощь специалиста</button>
@@ -549,9 +553,10 @@
     </div>
 </section>
 <section class="services">
+    <div class="services__title">Услуги ремонта</div>
     <div class="services__content">
         <div class="service">
-            <div class="service__title">Демонтажные работы в Днепропетровске</div>
+            <div class="service__name">Демонтажные работы в Днепропетровске</div>
             <div class="service__price">от 100 ₽/м2</div>
             <div class="service__text">К ним относятся подготовка поверхностей под покрытие, подготовка отделочных
                 материалов к нанесению, финишная покраска
@@ -559,7 +564,7 @@
             <button class="btn-primary service__more">Подробнее</button>
         </div>
         <div class="service">
-            <div class="service__title">Малярные работы в Днепропетровске</div>
+            <div class="service__name">Малярные работы в Днепропетровске</div>
             <div class="service__price">от 100 ₽/м2</div>
             <div class="service__text">К ним относятся подготовка поверхностей под покрытие, подготовка отделочных
                 материалов к нанесению, финишная покраска
@@ -567,7 +572,7 @@
             <button class="btn-primary service__more">Подробнее</button>
         </div>
         <div class="service">
-            <div class="service__title">Натяжные потолки в Днепропетровске</div>
+            <div class="service__name">Натяжные потолки в Днепропетровске</div>
             <div class="service__price">от 100 ₽/м2</div>
             <div class="service__text">К ним относятся подготовка поверхностей под покрытие, подготовка отделочных
                 материалов к нанесению, финишная покраска
@@ -575,7 +580,7 @@
             <button class="btn-primary service__more">Подробнее</button>
         </div>
         <div class="service">
-            <div class="service__title">Сантехнические работы в Днепропетровске</div>
+            <div class="service__name">Сантехнические работы в Днепропетровске</div>
             <div class="service__price">от 100 ₽/м2</div>
             <div class="service__text">К ним относятся подготовка поверхностей под покрытие, подготовка отделочных
                 материалов к нанесению, финишная покраска
@@ -583,7 +588,7 @@
             <button class="btn-primary service__more">Подробнее</button>
         </div>
         <div class="service">
-            <div class="service__title">Электромонтаж в Днепропетровске</div>
+            <div class="service__name">Электромонтаж в Днепропетровске</div>
             <div class="service__price">от 100 ₽/м2</div>
             <div class="service__text">К ним относятся подготовка поверхностей под покрытие, подготовка отделочных
                 материалов к нанесению, финишная покраска
@@ -591,7 +596,7 @@
             <button class="btn-primary service__more">Подробнее</button>
         </div>
         <div class="service">
-            <div class="service__title">Наливные полы в Днепропетровске</div>
+            <div class="service__name">Наливные полы в Днепропетровске</div>
             <div class="service__price">от 100 ₽/м2</div>
             <div class="service__text">К ним относятся подготовка поверхностей под покрытие, подготовка отделочных
                 материалов к нанесению, финишная покраска
@@ -599,7 +604,7 @@
             <button class="btn-primary service__more">Подробнее</button>
         </div>
         <div class="service">
-            <div class="service__title">Укладка плитки в Днепропетровске</div>
+            <div class="service__name">Укладка плитки в Днепропетровске</div>
             <div class="service__price">от 100 ₽/м2</div>
             <div class="service__text">К ним относятся подготовка поверхностей под покрытие, подготовка отделочных
                 материалов к нанесению, финишная покраска
@@ -736,13 +741,11 @@
             </div>
             <div class="footer__column">
                 <div class="footer__title">Навигация по сайту</div>
-                <a class="footer__link" href="">Главная</a>
-                <a class="footer__link" href="">Ремонт квартир</a>
-                <a class="footer__link" href="">Ремонт коммерческих объектов</a>
-                <a class="footer__link" href="">Ремонт коттеджей и домов</a>
-                <a class="footer__link" href="">Отдельные виды работ</a>
-                <a class="footer__link" href="">О нас</a>
-                <a class="footer__link" href="">Контакты</a>
+                <a class="footer__link">Главная</a>
+                <a class="footer__link">Ремонт</a>
+                <a class="footer__link">Отдельные виды работ</a>
+                <a class="footer__link">О нас</a>
+                <a class="footer__link">Контакты</a>
             </div>
             <div class="footer__column">
                 <div class="footer__title">Преимущества</div>
