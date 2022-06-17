@@ -3,28 +3,39 @@
 .popup {
     position: fixed;
     z-index: 7;
-    width: 100vw;
-    height: 100vh;
     background-color: rgba(0,0,0,0.3);
     opacity: 0;
     transition: opacity 0.2s ease;
     visibility: hidden;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
-    overflow: scroll;
+    overflow: hidden;
+    overflow-y: scroll;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    min-width: 100vw;
+    min-height: 100vh;
 
     &_open {
         opacity: 1;
         visibility: visible;
     }
 
+    &__wrapper {
+        margin: auto;
+    }
+
     &__body {
         position: relative;
+        margin: auto;
         border-radius: 5px;
-        overflow: hidden;
         max-width: 750px;
         width: calc(100% - 20px);
+        min-height: 100%;
     }
 
     &__close {

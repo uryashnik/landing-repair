@@ -15,31 +15,34 @@
     <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.5.3/dist/js/swiffy-slider.min.js" crossorigin="anonymous"
             defer></script>
 </head>
-<body>
-<!--<div class="popup popup_open">-->
 <div class="popup">
-    <div class="popup__body">
-        <div class="popup__close">
-            <span></span>
-            <span></span>
-        </div>
-        <form class="order" action="/" method="post">
-            <div class="order__title">Заполните форму</div>
-            <div class="order__subtitle">После этого мы перезвоним и обсудим все детали</div>
-            <div class="order__contacts">
-                <input name="name" class="order__input" type="text" placeholder="Имя"/>
-                <input name="phone" class="order__input" type="text" placeholder="Ваш Телефон"/>
+    <div class="popup__wrapper">
+        <div class="popup__body">
+            <div class="popup__close">
+                <span></span>
+                <span></span>
             </div>
-            <input name="description" class="order__input order__input_textArea" type="text"
-                   placeholder="Комментарий к заявке"/>
-            <div class="order__bottom">
-                <div class="order__terms">Нажимая на кнопку, Вы соглашаетесь с условиями <span class="order__accent">обработки персональных данных</span>
+
+            <form class="order" action="/" method="post">
+                <div class="order__title">Заполните форму</div>
+                <div class="order__subtitle">После этого мы перезвоним и обсудим все детали</div>
+                <div class="order__contacts">
+                    <input name="name" class="order__input" type="text" placeholder="Имя"/>
+                    <input name="phone" class="order__input" type="text" placeholder="Ваш Телефон"/>
                 </div>
-                <button type="submit" class="btn-primary">Оставить заявку</button>
-            </div>
-        </form>
+                <input name="description" class="order__input order__input_textArea" type="text"
+                       placeholder="Комментарий к заявке"/>
+                <div class="order__bottom">
+                    <div class="order__terms">Нажимая на кнопку, Вы соглашаетесь с условиями <span class="order__accent">обработки персональных данных</span>
+                    </div>
+                    <button type="submit" class="btn-primary">Оставить заявку</button>
+                </div>
+            </form>
+        </div>
     </div>
+
 </div>
+<body>
 <div class="navigation-icon">
     <span></span>
     <span></span>
