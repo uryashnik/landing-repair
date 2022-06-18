@@ -257,7 +257,7 @@ button {
 
 .preview {
   padding-top: 24px;
-  background: url("../../img/main_bg.png") no-repeat center;
+  background: url("../img/main_bg.png") no-repeat center;
   background-size: cover;
   height: 770px;
   position: relative;
@@ -1663,7 +1663,7 @@ body .navigation-icon span {
   position: absolute;
   height: 3px;
   width: 100%;
-  background: #FFFFFF;
+  background: #FF4C00;
   border-radius: 3px;
   opacity: 1;
   left: 0;
@@ -1714,7 +1714,7 @@ body .navigation-icon.navigation-icon_open span:nth-child(4) {
 
 @supports (-webkit-appearance:none) {
   .preview {
-    background: url("../../img/main_bg.webp") no-repeat center;
+    background: url("../img/main_bg.webp") no-repeat center;
   }
 }
 
@@ -2418,6 +2418,10 @@ body .navigation-icon.navigation-icon_open span:nth-child(4) {
 
   .footer__main {
     grid-template-columns: 1fr;
+  }
+
+  body .navigation-icon {
+    top: 42px;
   }
 
 @supports (-webkit-appearance:none) {

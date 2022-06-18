@@ -44,6 +44,10 @@ body {
         @include media-lg(){
             display: block;
         }
+
+        @include media-sm(){
+            top: 42px;
+        }
     }
 
     .navigation-icon span {
@@ -51,7 +55,7 @@ body {
         position: absolute;
         height: 3px;
         width: 100%;
-        background: $bg-white;
+        background: $bg-accent;
         border-radius: 3px;
         opacity: 1;
         left: 0;
