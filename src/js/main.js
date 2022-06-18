@@ -14,6 +14,8 @@ const getEmployee2 = document.getElementsByClassName('preparation__btn')[1];
 const getEmployee3 = document.getElementsByClassName('footer__link')[1];
 const sectionDiscussion = document.getElementsByClassName('discussion')[0]
 const sectionCalculator = document.getElementsByClassName('calculator')[0];
+const works = document.getElementsByClassName('works')[0];
+const comments = document.getElementsByClassName('comments')[0];
 
 const mainLink = document.getElementsByClassName('footer__link')[2];
 const preparationLink = document.getElementsByClassName('footer__link')[3];
@@ -21,15 +23,26 @@ const servicesLink = document.getElementsByClassName('footer__link')[4];
 const aboutLink = document.getElementsByClassName('footer__link')[5];
 const contactsLink = document.getElementsByClassName('footer__link')[6];
 
+const navigation = document.getElementsByClassName('navigation')[0].children[0].children;
+const mainLink2 = navigation[0];
+const servicesLink2 = navigation[1];
+const aboutLink2 = navigation[2];
+const linkPortfolio = navigation[3];
+const contactsLink2 = navigation[4];
+const linkComments = navigation[5];
+
+const navigation2 = document.getElementsByClassName('navigation')[1].children[0].children;
+const mainLink3 = navigation2[0];
+const servicesLink3 = navigation2[1];
+const aboutLink3 = navigation2[2];
+const linkPortfolio2 = navigation2[3];
+const contactsLink3 = navigation2[4];
+const linkComments2 = navigation2[5];
+
 const sectionPreview = document.getElementsByClassName('preview')[0];
 const sectionPreparation = document.getElementsByClassName('preparation')[0];
 const sectionServices = document.getElementsByClassName('services')[0];
 const sectionAbout = document.getElementsByClassName('about')[0];
-
-const objectTypeInput = document.getElementsByClassName('types__input')[0];
-const repairTypeInput = document.getElementsByClassName('types__input')[1];
-/// модуль калькулятора
-const allChips = document.querySelectorAll('.types__chips');
 
 
 // code js
@@ -109,6 +122,20 @@ mainLink.addEventListener('click', function () {
     })
 })
 
+mainLink2.addEventListener('click', function () {
+    sectionPreview.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+    })
+})
+
+mainLink3.addEventListener('click', function () {
+    sectionPreview.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+    })
+})
+
 preparationLink.addEventListener('click', function () {
     sectionPreparation.scrollIntoView({
         behavior: 'smooth',
@@ -123,7 +150,35 @@ servicesLink.addEventListener('click', function () {
     })
 })
 
+servicesLink2.addEventListener('click', function () {
+    sectionServices.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+    })
+})
+
+servicesLink3.addEventListener('click', function () {
+    sectionServices.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+    })
+})
+
 aboutLink.addEventListener('click', function () {
+    sectionAbout.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+    })
+})
+
+aboutLink2.addEventListener('click', function () {
+    sectionAbout.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+    })
+})
+
+aboutLink3.addEventListener('click', function () {
     sectionAbout.scrollIntoView({
         behavior: 'smooth',
         block: 'start'
@@ -132,6 +187,48 @@ aboutLink.addEventListener('click', function () {
 
 contactsLink.addEventListener('click', function () {
     sectionDiscussion.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+    })
+})
+
+contactsLink2.addEventListener('click', function () {
+    sectionDiscussion.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+    })
+})
+
+contactsLink3.addEventListener('click', function () {
+    sectionDiscussion.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+    })
+})
+
+linkPortfolio.addEventListener('click', function () {
+    works.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+    })
+})
+
+linkPortfolio2.addEventListener('click', function () {
+    works.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+    })
+})
+
+linkComments.addEventListener('click', function () {
+    comments.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+    })
+})
+
+linkComments2.addEventListener('click', function () {
+    comments.scrollIntoView({
         behavior: 'smooth',
         block: 'start'
     })
