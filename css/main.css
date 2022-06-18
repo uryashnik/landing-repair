@@ -1714,7 +1714,7 @@ body .navigation-icon.navigation-icon_open span:nth-child(4) {
 
 @supports (-webkit-appearance:none) {
   .preview {
-    background: url("../../img/main_bg.webp") no-repeat center;
+    background: url("../img/main_bg.webp") no-repeat center;
   }
 }
 
